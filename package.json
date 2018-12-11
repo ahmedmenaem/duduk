@@ -1,0 +1,42 @@
+{
+	"name": "duduk",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"build": "babel ./src -d dist",
+		"dev": "nodemon ./src/index.js --exec babel-node",
+		"start:dev": "npm run build && node ./dist/index.js",
+		"start": "node ./dist/index.js"
+	},
+	"keywords": [
+		"git",
+		"CLI",
+		"duduk"
+	],
+	"bin": {
+		"duduk": "./dist/index.js"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.0.0",
+		"@babel/runtime": "^7.2.0",
+		"chalk": "^2.4.1",
+		"clear": "^0.1.0",
+		"clui": "^0.3.6",
+		"configstore": "^4.0.0",
+		"figlet": "^1.2.1",
+		"g": "^2.0.1",
+		"inquirer": "^6.2.1",
+		"minimist": "^1.2.0",
+		"touch": "^3.1.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.2.0",
+		"@babel/core": "^7.2.0",
+		"@babel/node": "^7.2.0",
+		"@babel/plugin-transform-runtime": "^7.2.0",
+		"@babel/preset-env": "^7.2.0",
+		"eslint": "^5.10.0",
+		"nodemon": "^1.18.8"
+	}
+}
